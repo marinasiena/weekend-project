@@ -1,31 +1,30 @@
-( function() {
-	"use strict";
+(function() {
+  "use strict";
 
-	$( document ).ready( () => {
+  $(document).ready(() => {
 
-		console.clear();
+    console.clear();
 
-		const APP = function() {
+    const APP = function() {
 
-			const thing = 'something';
-			console.log(thing);
-
-
+      const thing = 'something';
+      console.log(thing);
 
 
-			function init() {
 
-			}
 
-			return {
-				begin: init
-			};
+      function init() {
 
-		}; //end APP
+      }
 
-	} ); //end docready
+      return {
+        begin: init
+      };
+    }; //end APP
 
-	const THING = APP();
-	THING.init();
+  }); //end docready
 
-} )(); //end iife
+  const THING = APP();
+  THING.init();
+
+})(); //end iife
