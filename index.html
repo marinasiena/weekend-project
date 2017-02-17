@@ -2,52 +2,91 @@
 <html lang="en">
 
 <head>
-  <title></title>
   <meta name="viewport" content="width=device-width" initial-scale="1">
-  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:100,400,700|Montserrat:100,400,700" rel="stylesheet">
   <link rel=stylesheet type="text/css" href="./lib/styles/main.css">
-</head>1⁄
+</head>
 
 <body>
 
-  <header>
-    <span>LOGO</span>
-
-    <nav class='main-nav'>
-      <ul>
-        <li>Become a Host</li>
-        <li>Trips</li>
-        <li>Messages</li>
-        <li>Help</li>
-      </ul>
-    </nav>
-
-  </header>
-
   <main>
-    <h1>Unforgettable trips start with Airbnb.</h1>
-    <h2>Book unique experiences and homes in 191+ countries.</h2>
-    <form id='city-input'>
-      <input type='text' placeholder='enter city' />
-    </form>
 
-    <section class='popular-experiences'>
-      <div class='experience-wrapper'>
-        <article class='experience'>
-
-        </article>
+    <!-- userblock   -->
+    <article class='user-block'>
+      <div class='lower-half'>
+        <div class='username-block'>
+          <img src='./img/msLogo.jpeg' />
+          <h2>Marina Siena</h2>
+          <p>@username</p>
+        </div>
+        <ul>
+          <li>
+            <p class = 'user-block-heading'>Tweets</p>
+            <p class = 'user-block-values'>50</p>
+          </li>
+          <li>
+            <p class = 'user-block-heading'>Following</p>
+            <p class = 'user-block-values'>20</p>
+          </li>
+          <li>
+            <p class = 'user-block-heading'>Followers</p>
+            <p class = 'user-block-values'>130</p>
+          </li>
+        </ul>
       </div>
+    </article>
+
+    <!-- trends block -->
+    <article class='trends-block'>
+      <h3>Trends<span>Change</span></h3>
+      <div class='trends-tweet'>
+        <h4>Tweet Title</h4>
+        <p>trends text</p>
+      </div>
+    </article>
+
+    <!-- who to follow -->
+    <article class='follow-block'>
+      <h3>Who to follow<span>Refresh</span><span>View all</span></h3>
+      <div class='follow-tweet'>
+        <h4>Tweet Title</h4>
+        <p>trends text</p>
+      </div>
+    </article>
+
+    <!-- copyright block -->
+    <aside class='copyright-block'>
+      <span>&copy;2017 Twitter</span><span>About</span><span>Help Center</span><span>Terms</span><span>Privacy policy</span><span>Cookies</span><span>Ads info</span><span>Brand</span><span>Blog</span><span> Brand</span><span>Blog</span><span>Business</span><span>Developers</span>
+    </aside>
+
+    <!-- tweet-block -->
+    <section class='tweet-block'>
+      <img src='./img/msLogo.jpeg' />
+      <div class='tweet-block-right'>
+
+        <h4 class='tweet-username'>Emo Phillips<span>@EmoPhillips</span></h4>
+        <p class='tweet'>
+          Dear Everyone on the Planet, Please listen to this for Pete's sake why don't you for crying out loud. Love, Emo
+        </p>
+        <div class='tweet-icons'>
+          <span class='tweet-icon'><img src = './img/tweet-icon1.png' /></span>
+          <span class='tweet-icon'><img src = './img/tweet-icon2.png' /></span>
+          <span class='tweet-icon'><img src = './img/tweet-icon3.png' /></span>
+        </div>
+      </div>
+
     </section>
+
+
+
 
   </main>
 
   <footer>
   </footer>
-  <script type="text/javascript" src='./lib/js/vendor/vendor.min.js'></script>
 
-  <!-- <script type="text/javascript" src='./lib/js/vendor/moment.js'></script> -->
-  <!-- <script type="text/javascript" src='./lib/js/vendor/jquery-3.1.1.min.js'></script> -->
-  <!-- <script type="text/javascript" src='./lib/js/vendor/handlebars-v4.0.5.js'></script> -->
+  <script type="text/javascript" src='./lib/js/vendor/vendor.min.js'></script>
   <script type="text/javascript" src="./lib/js/main.js"></script>
+
 </body>
 </html>

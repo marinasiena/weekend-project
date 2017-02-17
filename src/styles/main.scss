@@ -1,8 +1,17 @@
 @import 'partials/reset';
-
+@import 'partials/styling';
+@import 'partials/user-block';
+@import 'partials/trends-block';
+@import 'partials/follow-block';
+@import 'partials/copyright-block';
+@import 'partials/tweet-block';
 
 body {
-    font:  16px/1.6 $Circular;
-  width: 100%;
-  margin: 0 auto;
+    font: 14px/1.4 $Arimo;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    color: $color;
 }

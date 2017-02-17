@@ -1,9 +1,18 @@
 
 //fonts
-$Circular: 'Quattrocento Sans', sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+$Arimo: 'Arimo', sans-serif;
 
 //colors
-$red: '#FF5A5F';
-$dkgray: '#484848';
-$teal: '#00A699';
-$ltgray: '#CBCBCB';
+$red: #E81C4F;
+$dkgray: #626262;
+$color: #009999;
+$ltgray: #CBCBCB;
+
+@mixin isRounded {
+  border-radius: 5px;
+}
+
+@mixin vcenter {
+  transform: translate(0, -50%);
+}
