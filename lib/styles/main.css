@@ -1,3 +1,66 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+button:focus, textarea:focus {
+  outline: none; }
+
+img {
+  max-width: 100%;
+  width: 100%; }
+
+.is-flex {
+  display: flex; }
+
+.is-hidden {
+  display: none; }
+
 .topbar {
   border-bottom: 1.5px solid #d0d3d5;
   justify-content: space-around;
@@ -104,12 +167,6 @@
 .tweet-icon {
   width: 50%; }
 
-.is-flex {
-  display: flex; }
-
-.is-hidden {
-  display: none; }
-
 .main-container {
   margin-left: 131px;
   margin-right: 131px; }
@@ -128,7 +185,7 @@
 
 .user-block {
   border-radius: 5px;
-  background-color: #009999;
+  background-color: #1DA1F2;
   border: 1px solid #CBCBCB;
   height: 200px;
   margin: 5px;
@@ -146,7 +203,7 @@
   font-size: 0.7rem; }
 
 .user-block-values {
-  color: #009999;
+  color: #1DA1F2;
   font-weight: 700; }
 
 .lower-half {
@@ -182,11 +239,11 @@
     font: 100 1rem/1 "Montserrat", sans-serif; }
     .trends-block h3 span {
       font: 400 0.7rem/1 "Arimo", sans-serif;
-      color: #009999;
+      color: #1DA1F2;
       padding-left: 5px; }
 
 .trends-tweet h4 {
-  color: #009999;
+  color: #1DA1F2;
   font: 700 0.8rem/1 "Arimo", sans-serif;
   padding: 5px 5px 0; }
 
@@ -206,11 +263,11 @@
     font: 100 1rem/1 "Montserrat", sans-serif; }
     .follow-block h3 span {
       font: 400 0.7rem/1 "Arimo", sans-serif;
-      color: #009999;
+      color: #1DA1F2;
       padding-left: 5px; }
 
 .follow-tweet h4 {
-  color: #009999;
+  color: #1DA1F2;
   font: 700 0.8rem/1 "Arimo", sans-serif;
   padding: 5px 5px 0; }
 
@@ -259,21 +316,9 @@
     font: 100 0.7rem/1 "Montserrat", sans-serif; }
 
 body {
-<<<<<<< HEAD
   font: 14px/1.4 "Arimo", sans-serif;
   width: 100%;
   margin: 0 auto; }
 
 a {
-  color: #009999; }
-=======
-  font-family: "Arimo", sans-serif;
-  width: 100%;
-  margin: 0 auto; }
-
-.contentcontainer {
-  border: 1px solid black;
-  padding: 56px 14px 15px;
-  position: relative;
-  width: 1190px; }
->>>>>>> master
+  color: #1DA1F2; }

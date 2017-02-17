@@ -10,6 +10,7 @@ $dkgray: #626262;
 $color: #1DA1F2;
 $ltgray: #CBCBCB;
 
+//mixins
 @mixin isRounded {
   border-radius: 5px;
 }
@@ -17,4 +18,12 @@ $ltgray: #CBCBCB;
 @mixin vcenter {
   transform: translate(0, -50%);
 }
-=======
+
+//styling
+.is-flex {
+  display: flex;
+}
+
+.is-hidden {
+  display: none;
+}
