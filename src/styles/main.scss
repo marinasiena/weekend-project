@@ -9,12 +9,8 @@
 @import 'partials/copyright-block';
 @import 'partials/tweet-block';
 
-body {
-    font: 14px/1.4 $Arimo;
-    width: 100%;
-    margin: 0 auto;
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2vh;
 }
-
-a {
-    color: $color;
-  }

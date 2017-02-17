@@ -1,9 +1,5 @@
-.tweet-block {
-    @include isRounded;
-    border: 1px solid $ltgray;
-    margin: 5px;
-    padding: 10px;
-    position: relative;
+.tweets {
+  @include block-styling;
     width: 450px;
     display: flex;
     align-items: top;
@@ -14,11 +10,11 @@
       padding: 5px;
     }
     & span img {
-        max-height: 20px;
+        max-height: 30px;
         width: auto;
     }
 }
-.tweet-block-right {
+.tweets-right {
   & h4 {
     font: 700 .8rem/1 $Arimo;
     padding-bottom: 5px;

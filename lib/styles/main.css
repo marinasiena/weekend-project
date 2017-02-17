@@ -62,6 +62,7 @@ img {
   display: none; }
 
 .topbar {
+  background-color: white;
   border-bottom: 1.5px solid #d0d3d5;
   justify-content: space-around;
   height: 46px; }
@@ -167,6 +168,15 @@ img {
 .tweet-icon {
   width: 50%; }
 
+body {
+  font: 14px/1.4 "Arimo", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #E5F0F7; }
+
+a {
+  color: #1DA1F2; }
+
 .main-container {
   margin-left: 131px;
   margin-right: 131px; }
@@ -185,12 +195,17 @@ img {
 
 .user-block {
   border-radius: 5px;
-  background-color: #1DA1F2;
+  border-radius: 5px;
+  background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
-  height: 200px;
   margin: 5px;
+  padding: 10px;
   position: relative;
-  width: 300px; }
+  width: 250px;
+  background-color: #1DA1F2;
+  padding: 0;
+  width: 250px;
+  height: 180px; }
   .user-block h2 {
     font-weight: 700;
     font-size: 1.1rem; }
@@ -199,8 +214,7 @@ img {
 
 .user-block-heading {
   color: #CBCBCB;
-  text-transform: uppercase;
-  font-size: 0.7rem; }
+  text-transform: uppercase; }
 
 .user-block-values {
   color: #1DA1F2;
@@ -209,32 +223,33 @@ img {
 .lower-half {
   background-color: white;
   bottom: 0;
-  height: 120px;
+  height: 100px;
   position: absolute;
   width: 100%; }
   .lower-half ul {
     clear: both;
     display: flex;
     height: 0;
-    justify-content: space-around; }
+    justify-content: center; }
+    .lower-half ul li {
+      padding: 0 3px; }
 
-.username-block {
-  align-items: baseline;
-  justify-content: flex-start; }
-  .username-block img {
-    border-radius: 5px;
-    transform: translate(0, -50%);
-    border: 3px solid white;
-    float: left;
-    width: 75px; }
+.username-block img {
+  border-radius: 5px;
+  transform: translate(0, -50%);
+  border: 3px solid white;
+  float: left;
+  margin: 0 5px -20px;
+  width: 75px; }
 
 .trends-block {
   border-radius: 5px;
+  background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
   margin: 5px;
   padding: 10px;
   position: relative;
-  width: 300px; }
+  width: 250px; }
   .trends-block h3 {
     font: 100 1rem/1 "Montserrat", sans-serif; }
     .trends-block h3 span {
@@ -254,11 +269,12 @@ img {
 
 .follow-block {
   border-radius: 5px;
+  background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
   margin: 5px;
   padding: 10px;
   position: relative;
-  width: 300px; }
+  width: 250px; }
   .follow-block h3 {
     font: 100 1rem/1 "Montserrat", sans-serif; }
     .follow-block h3 span {
@@ -278,11 +294,12 @@ img {
 
 .copyright-block {
   border-radius: 5px;
+  background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
   margin: 5px;
   padding: 10px;
   position: relative;
-  width: 300px; }
+  width: 250px; }
   .copyright-block span {
     font: 100 0.7rem/1 "Arimo", sans-serif;
     color: #CBCBCB;
@@ -291,34 +308,33 @@ img {
       color: #626262;
       text-decoration: underline; }
 
-.tweet-block {
+.tweets {
   border-radius: 5px;
+  background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
   margin: 5px;
   padding: 10px;
   position: relative;
+  width: 250px;
   width: 450px;
   display: flex;
   align-items: top;
   justify-content: flex; }
-  .tweet-block img {
+  .tweets img {
     height: 50px;
     width: 50px;
     padding: 5px; }
-  .tweet-block span img {
-    max-height: 20px;
+  .tweets span img {
+    max-height: 30px;
     width: auto; }
 
-.tweet-block-right h4 {
+.tweets-right h4 {
   font: 700 0.8rem/1 "Arimo", sans-serif;
   padding-bottom: 5px; }
-  .tweet-block-right h4 span {
+  .tweets-right h4 span {
     font: 100 0.7rem/1 "Montserrat", sans-serif; }
 
-body {
-  font: 14px/1.4 "Arimo", sans-serif;
-  width: 100%;
-  margin: 0 auto; }
-
-a {
-  color: #1DA1F2; }
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2vh; }

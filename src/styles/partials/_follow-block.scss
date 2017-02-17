@@ -1,11 +1,5 @@
 .follow-block {
-    @include isRounded;
-    border: 1px solid $ltgray;
-    margin: 5px;
-    padding: 10px;
-    position: relative;
-    width: 300px;
-
+  @include block-styling;
     & h3 {
         font: 100 1rem/1 $Montserrat;
 

@@ -5,6 +5,7 @@ $Arimo: 'Arimo', sans-serif;
 
 //colors
 $red: #E81C4F;
+$pg-bg: #E5F0F7;
 $darkwhite: #f5f8fa;
 $dkgray: #626262;
 $color: #1DA1F2;
@@ -17,6 +18,17 @@ $ltgray: #CBCBCB;
 
 @mixin vcenter {
   transform: translate(0, -50%);
+}
+
+//block-styling
+@mixin block-styling {
+  @include isRounded;
+  background-color: $darkwhite;
+  border: 1px solid $ltgray;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 250px;
 }
 
 //styling

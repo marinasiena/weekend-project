@@ -1,10 +1,5 @@
 .copyright-block {
-      @include isRounded;
-      border: 1px solid $ltgray;
-      margin: 5px;
-      padding: 10px;
-      position: relative;
-      width: 300px;
+  @include block-styling;
       & span {
         font: 100 .7rem/1 $Arimo;
         color: $ltgray;
