@@ -2,9 +2,19 @@
 //fonts
 $Montserrat: 'Montserrat', sans-serif;
 $Arimo: 'Arimo', sans-serif;
+
 //colors
-$white: #000000;
+$red: #E81C4F;
 $darkwhite: #f5f8fa;
-$ltgray: #a19c9c;
-$tweetblue: #0082B1;
-$birdblue: #1DA1F2;
+$dkgray: #626262;
+$color: #1DA1F2;
+$ltgray: #CBCBCB;
+
+@mixin isRounded {
+  border-radius: 5px;
+}
+
+@mixin vcenter {
+  transform: translate(0, -50%);
+}
+=======

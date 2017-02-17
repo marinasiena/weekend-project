@@ -1,0 +1,29 @@
+.tweet-block {
+    @include isRounded;
+    border: 1px solid $ltgray;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    width: 450px;
+    display: flex;
+    align-items: top;
+    justify-content: flex;
+    & img {
+      height: 50px;
+      width: 50px;
+      padding: 5px;
+    }
+    & span img {
+        max-height: 20px;
+        width: auto;
+    }
+}
+.tweet-block-right {
+  & h4 {
+    font: 700 .8rem/1 $Arimo;
+    padding-bottom: 5px;
+    & span {
+      font: 100 .7rem/1 $Montserrat;
+    }
+  }
+}

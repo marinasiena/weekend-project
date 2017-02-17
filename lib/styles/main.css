@@ -126,7 +126,147 @@
   margin: 10px;
   width: 100%; }
 
+.user-block {
+  border-radius: 5px;
+  background-color: #009999;
+  border: 1px solid #CBCBCB;
+  height: 200px;
+  margin: 5px;
+  position: relative;
+  width: 300px; }
+  .user-block h2 {
+    font-weight: 700;
+    font-size: 1.1rem; }
+  .user-block p {
+    font-size: 0.8rem; }
+
+.user-block-heading {
+  color: #CBCBCB;
+  text-transform: uppercase;
+  font-size: 0.7rem; }
+
+.user-block-values {
+  color: #009999;
+  font-weight: 700; }
+
+.lower-half {
+  background-color: white;
+  bottom: 0;
+  height: 120px;
+  position: absolute;
+  width: 100%; }
+  .lower-half ul {
+    clear: both;
+    display: flex;
+    height: 0;
+    justify-content: space-around; }
+
+.username-block {
+  align-items: baseline;
+  justify-content: flex-start; }
+  .username-block img {
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    border: 3px solid white;
+    float: left;
+    width: 75px; }
+
+.trends-block {
+  border-radius: 5px;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 300px; }
+  .trends-block h3 {
+    font: 100 1rem/1 "Montserrat", sans-serif; }
+    .trends-block h3 span {
+      font: 400 0.7rem/1 "Arimo", sans-serif;
+      color: #009999;
+      padding-left: 5px; }
+
+.trends-tweet h4 {
+  color: #009999;
+  font: 700 0.8rem/1 "Arimo", sans-serif;
+  padding: 5px 5px 0; }
+
+.trends-tweet p {
+  color: #626262;
+  font: 400 0.8rem/1 "Arimo", sans-serif;
+  padding-left: 5px; }
+
+.follow-block {
+  border-radius: 5px;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 300px; }
+  .follow-block h3 {
+    font: 100 1rem/1 "Montserrat", sans-serif; }
+    .follow-block h3 span {
+      font: 400 0.7rem/1 "Arimo", sans-serif;
+      color: #009999;
+      padding-left: 5px; }
+
+.follow-tweet h4 {
+  color: #009999;
+  font: 700 0.8rem/1 "Arimo", sans-serif;
+  padding: 5px 5px 0; }
+
+.follow-tweet p {
+  color: #626262;
+  font: 400 0.8rem/1 "Arimo", sans-serif;
+  padding-left: 5px; }
+
+.copyright-block {
+  border-radius: 5px;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 300px; }
+  .copyright-block span {
+    font: 100 0.7rem/1 "Arimo", sans-serif;
+    color: #CBCBCB;
+    padding: 5px; }
+    .copyright-block span:hover {
+      color: #626262;
+      text-decoration: underline; }
+
+.tweet-block {
+  border-radius: 5px;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 450px;
+  display: flex;
+  align-items: top;
+  justify-content: flex; }
+  .tweet-block img {
+    height: 50px;
+    width: 50px;
+    padding: 5px; }
+  .tweet-block span img {
+    max-height: 20px;
+    width: auto; }
+
+.tweet-block-right h4 {
+  font: 700 0.8rem/1 "Arimo", sans-serif;
+  padding-bottom: 5px; }
+  .tweet-block-right h4 span {
+    font: 100 0.7rem/1 "Montserrat", sans-serif; }
+
 body {
+<<<<<<< HEAD
+  font: 14px/1.4 "Arimo", sans-serif;
+  width: 100%;
+  margin: 0 auto; }
+
+a {
+  color: #009999; }
+=======
   font-family: "Arimo", sans-serif;
   width: 100%;
   margin: 0 auto; }
@@ -136,3 +276,4 @@ body {
   padding: 56px 14px 15px;
   position: relative;
   width: 1190px; }
+>>>>>>> master

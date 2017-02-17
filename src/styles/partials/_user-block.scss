@@ -1,0 +1,55 @@
+.user-block {
+    @include isRounded;
+    background-color: $color;
+    border: 1px solid $ltgray;
+    height: 200px;
+    margin: 5px;
+    position: relative;
+    width: 300px;
+    h2 {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+.user-block-heading {
+    color: $ltgray;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.user-block-values {
+    color: $color;
+    font-weight: 700;
+}
+
+.lower-half {
+    background-color: white;
+    bottom: 0;
+    height: 120px;
+    position: absolute;
+    width: 100%;
+
+    & ul {
+        clear: both;
+        display: flex;
+        height: 0;
+        justify-content: space-around;
+    }
+}
+
+.username-block {
+    align-items: baseline;
+    justify-content: flex-start;
+
+    & img {
+        @include isRounded;
+        @include vcenter;
+        border: 3px solid white;
+        float: left;
+        width: 75px;
+    }
+  }
