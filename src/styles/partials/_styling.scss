@@ -5,8 +5,9 @@ $Arimo: 'Arimo', sans-serif;
 
 //colors
 $red: #E81C4F;
+$darkwhite: #f5f8fa;
 $dkgray: #626262;
-$color: #009999;
+$color: #1DA1F2;
 $ltgray: #CBCBCB;
 
 @mixin isRounded {
@@ -16,3 +17,4 @@ $ltgray: #CBCBCB;
 @mixin vcenter {
   transform: translate(0, -50%);
 }
+=======

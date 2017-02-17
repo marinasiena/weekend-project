@@ -1,5 +1,8 @@
 @import 'partials/reset';
 @import 'partials/styling';
+@import 'partials/topbar';
+@import 'partials/globals';
+@import 'partials/maincontainer';
 @import 'partials/user-block';
 @import 'partials/trends-block';
 @import 'partials/follow-block';
@@ -14,4 +17,3 @@ body {
 
 a {
     color: $color;
-}
