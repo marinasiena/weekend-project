@@ -1,24 +1,45 @@
-( function() {
-	"use strict";
+(function() {
+    "use strict";
 
-	$( document ).ready( () => {
-
-		const shttr = (function() {
-
-			const inputForm = document.querySelector( '.user-input-form' );
-			const nameInput = document.querySelector( '.name-input' );
-			const usernameInput = document.querySelector( '.username-input' );
-			const emailInput = document.querySelector( '.email-input' );
-			const passwordInput = document.querySelector( '.password-input' );
-			const imageInput = document.querySelector( '.image-input' );
+    const shitterModule = function() {
+      let form = document.querySelector('.user-input-form');
+      let nameInput = document.querySelector('.name-input');
+      let usernameInput = document.querySelector('.username-input');
+      let emailInput = document.querySelector('.email-input');
+      let passwordInput = document.querySelector('.password-input');
+      let imageInput = document.querySelector('.image-input');
+      let tweetForm = document.querySelector('.new-tweet-form');
+      let tweetText = document.querySelector('.tweet-text');
 
 
       let userObj = {};
 
 
-			function bindEvents() {
-				inputForm.addEventListener( 'submit', () => {
-					event.preventDefault();
+      // class User {
+      //   constructor(data) {
+      //     this.email = data.email;
+      //     this.userName = data.username;
+      //     this.name = data.name;
+      //     this.image = data.image;
+      //     this.build();
+      //   }
+      //   build() {
+      //     const source = $('').html();
+      //     const template = Handlebars.compile(source);
+      //     const context = {
+      //       email: this.email,
+      //       userName: this.userName,
+      //       name: this.name,
+      //       image: this.image
+      //     };
+      //     const html = template(context);
+      //     $('.grid').prepend(html);
+      //   }
+      // }
+
+      function bindEvents() {
+        inputForm.addEventListener('submit', () => {
+          event.preventDefault();
           userObj = {
             name: nameInput.value,
             username: usernameInput.value,
@@ -26,63 +47,74 @@
             password: passwordInput.value,
             image: imageInput.value
           };
-					console.log( 'newUser',userObj );
+          console.log('newUser', userObj);
           addUser(userObj);
           inputForm.reset();
-				} );
+        });
 
-        inputForm.addEventListener( 'submit', () => {
-					event.preventDefault();
-          userObj = {
-            name: nameInput.value,
-            username: usernameInput.value,
-            email: emailInput.value,
-            password: passwordInput.value,
-            image: imageInput.value
-          };
-					console.log( 'newUser',userObj );
-          addUser(userObj);
-          inputForm.reset();
-				} );
+        // tweetForm.addEventListener('submit', () => {
+        // 	event.preventDefault();
+        // 	tweetObj = {
+        // 		message: tweetText.value,
+        // 	}
+        // 	form.reset();
+        // 	addTweet(tweetObj);
+        // });
 
-			} //end bindEvents
+      } //end bindEvents
 
-function addUser(userObj) {
+      function addUser(userObj) {
 
-  $.ajax( {
-    type: 'POST',
-    url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
-    dataType: 'json',
-    crossDomain: 'true',
-    data: {
-      name: userObj.name,
-      username: userObj.username,
-      email: userObj.email,
-      password: userObj.password,
-      image: userObj.image
-    }
-  } ).then( (response) => {
-    console.log( 'sent!', response );
-    //     getUserID();
-  } ).catch( function( status ) {
-    console.log( status );
-  } );
-} //end submitUser
+        $.ajax({
+          type: 'POST',
+          url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
+          dataType: 'json',
+          crossDomain: 'true',
+          data: {
+            name: userObj.name,
+            username: userObj.username,
+            email: userObj.email,
+            password: userObj.password,
+            image: userObj.image
+          }
+        }).then((response) => {
+          console.log('sent!', response);
+          //     getUserID();
+        }).catch(function(status) {
+          console.log(status);
+        });
+      } //end submitUser
 
-			function init() {
-				bindEvents();
-			}
+      function addTweet(tweetObj) {
+        $.ajax({
+          type: 'POST',
+          url: `http://chattertiy-api.herokuapp.com/messages?message[user_id]=1&message[text]=the ${tweetObj.message}`,
+          dataType: 'json',
+          crossDomain: 'true',
+          data: {
 
-			return {
-				init: init
-			};
+          }
+        }).then((response) => {
+          console.log('sent!', response);
+          //     getUserID();
+        }).catch(function(status) {
+          console.log(status);
+        });
+      } //end submitUser
+
+      function init() {
+        bindEvents();
+      }
+
+      return {
+        init: init
+      };
 
     });
 
-		const ourTwitter = shttr();
-		ourTwitter.init();
-	}); //end docready
-} )(); //end iife
+  const ourTwitter = shttr(); ourTwitter.init();
+}); //end docready
+})(); //end iife
 
 // class User {
 //      constructor(data) {
