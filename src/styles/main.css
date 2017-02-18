@@ -67,7 +67,7 @@ a {
 .page-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 2vh; }
+  margin-top: 15vh; }
 
 .button {
   background-color: #1DA1F2;
@@ -320,7 +320,6 @@ a {
   color: #1DA1F2;
   font: 700 0.8rem/1 "Arimo", sans-serif;
   padding: 5px 5px 0; }
-
 .trends-tweet p {
   color: #626262;
   font: 400 0.8rem/1 "Arimo", sans-serif;
@@ -429,3 +428,5 @@ a {
 
 .is-hidden {
   display: none; }
+
+/*# sourceMappingURL=main.css.map */
