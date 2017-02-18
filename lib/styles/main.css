@@ -55,6 +55,18 @@ img {
   max-width: 100%;
   width: 100%; }
 
+.button {
+  background-color: #1DA1F2;
+  border-radius: 5px;
+  border: none;
+  color: #f5f8fa;
+  font-size: 1rem;
+  margin: 5px;
+  width: 80px; }
+  .button:hover {
+    background-color: #0b76b8;
+    color: white; }
+
 .float-left {
   float: left; }
 
@@ -351,17 +363,6 @@ a {
     padding-left: 5px;
     resize: none;
     width: 350px; }
-  .new-tweet-form button {
-    background-color: #1DA1F2;
-    border-radius: 5px;
-    border: none;
-    color: #f5f8fa;
-    font-size: 1rem;
-    margin: 5px;
-    width: 80px; }
-    .new-tweet-form button:hover {
-      background-color: #0b76b8;
-      color: white; }
 
 .tweets {
   border-radius: 5px;
@@ -388,6 +389,30 @@ a {
   padding-bottom: 5px; }
   .tweets-right h4 span {
     font: 100 0.7rem/1 "Montserrat", sans-serif; }
+
+.user-input-form {
+  align-items: center;
+  background-color: #f5f8fa;
+  border: 1px solid #1DA1F2;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 60px 0;
+  width: 300px; }
+  .user-input-form h1 {
+    font: 700 1rem "Arimo", sans-serif;
+    color: #1DA1F2; }
+  .user-input-form img {
+    padding-bottom: 20px; }
+  .user-input-form input {
+    width: 200px;
+    font: 400 1rem "Arimo", sans-serif;
+    text-align: center;
+    border-radius: 5px; }
+  .user-input-form button {
+    margin-top: 20px; }
 
 .page-wrapper {
   display: flex;

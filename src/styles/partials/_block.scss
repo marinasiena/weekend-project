@@ -160,21 +160,6 @@
         resize: none;
         width: 350px;
     }
-
-    & button {
-        background-color: $color;
-        border-radius: 5px;
-        border: none;
-        color: $darkwhite;
-        font-size: 1rem;
-        margin: 5px;
-        width: 80px;
-
-        &:hover {
-            background-color: darken($color, 15% );
-            color: white;
-        }
-    }
 }
 
 .tweets {
