@@ -5,6 +5,7 @@ $Arimo: 'Arimo', sans-serif;
 
 //colors
 $red: #E81C4F;
+$pg-bg: #E5F0F7;
 $darkwhite: #f5f8fa;
 $dkgray: #626262;
 $color: #1DA1F2;
@@ -19,7 +20,54 @@ $ltgray: #CBCBCB;
   transform: translate(0, -50%);
 }
 
+//block-styling
+@mixin block-styling {
+  @include isRounded;
+  background-color: $darkwhite;
+  border: 1px solid $ltgray;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 250px;
+}
+
+//button styling
+.button {
+  background-color: $color;
+  border-radius: 5px;
+  border: none;
+  color: $darkwhite;
+  font-size: 1rem;
+  margin: 5px;
+  width: 80px;
+  &:hover {
+      background-color: darken($color, 15% );
+      color: white;
+  }
+}
+
+
 //styling
+
+.float-left {
+  float:left;
+}
+
+.is-clear {
+  clear: both;
+}
+.icon-sm {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.icon-md {
+  height: 75px;
+  width: 75px;
+  border-radius: 10px;
+}
+
 .is-flex {
   display: flex;
 }

@@ -1,11 +1,10 @@
 .user-block {
     @include isRounded;
+    @include block-styling;
     background-color: $color;
-    border: 1px solid $ltgray;
-    height: 200px;
-    margin: 5px;
-    position: relative;
-    width: 300px;
+    padding: 0;
+    width: 250px;
+    height: 180px;
     h2 {
         font-weight: 700;
         font-size: 1.1rem;
@@ -18,7 +17,6 @@
 .user-block-heading {
     color: $ltgray;
     text-transform: uppercase;
-    font-size: 0.7rem;
 }
 
 .user-block-values {
@@ -29,7 +27,7 @@
 .lower-half {
     background-color: white;
     bottom: 0;
-    height: 120px;
+    height: 100px;
     position: absolute;
     width: 100%;
 
@@ -37,19 +35,21 @@
         clear: both;
         display: flex;
         height: 0;
-        justify-content: space-around;
+        justify-content: center;
+        & li {
+          padding: 0 3px;
+
+        }
     }
 }
 
 .username-block {
-    align-items: baseline;
-    justify-content: flex-start;
-
     & img {
         @include isRounded;
         @include vcenter;
         border: 3px solid white;
         float: left;
+        margin: 0 5px -20px;
         width: 75px;
     }
   }
