@@ -48,10 +48,14 @@
 			} //end bindEvents
 
 function addUser(userObj) {
+  if (userObj) {
+  const newUserURL = `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`;
+} else
+  const authUserURL = `http://chattertiy-api.herokuapp.com/auth/sign_in?email=${userObj.email}&password=${userObj.password}`;
 
   $.ajax( {
     type: 'POST',
-    url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
+    url: 'url',
     dataType: 'json',
     crossDomain: 'true',
     data: {
