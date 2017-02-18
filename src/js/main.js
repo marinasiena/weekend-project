@@ -1,19 +1,19 @@
-'use strict';
-
-(function () {
+(function() {
   "use strict";
 
-  var shitterModule = function shitterModule() {
-    var form = document.querySelector('.user-input-form');
-    var nameInput = document.querySelector('.name-input');
-    var usernameInput = document.querySelector('.username-input');
-    var emailInput = document.querySelector('.email-input');
-    var passwordInput = document.querySelector('.password-input');
-    var imageInput = document.querySelector('.image-input');
-    var tweetForm = document.querySelector('.new-tweet-form');
-    var tweetText = document.querySelector('.tweet-text');
+  const shitterModule = function() {
+    let form = document.querySelector('.user-input-form');
+    let nameInput = document.querySelector('.name-input');
+    let usernameInput = document.querySelector('.username-input');
+    let emailInput = document.querySelector('.email-input');
+    let passwordInput = document.querySelector('.password-input');
+    let imageInput = document.querySelector('.image-input');
+    let tweetForm = document.querySelector('.new-tweet-form');
+    let tweetText = document.querySelector('.tweet-text');
 
-    var userObj = {};
+
+    let userObj = {};
+
 
     // class User {
     //   constructor(data) {
@@ -39,7 +39,7 @@
 
     function bindEvents() {
 
-      form.addEventListener('submit', function () {
+      form.addEventListener('submit', () => {
         event.preventDefault();
         userObj = {
           name: nameInput.value,
@@ -47,27 +47,28 @@
           email: emailInput.value,
           password: passwordInput.value,
           image: imageInput.value
-        };
+        }
         form.reset();
         addUser(userObj);
       });
 
-      tweetForm.addEventListener('submit', function () {
+      tweetForm.addEventListener('submit', () => {
         event.preventDefault();
         tweetObj = {
-          message: tweetText.value
+          message: tweetText.value,
 
-        };
+        }
         form.reset();
         addTweet(tweetObj);
       });
+
     } //end bindEvents
 
 
     function addUser(userObj) {
       $.ajax({
         type: 'POST',
-        url: 'https://chattertiy-api.herokuapp.com/auth?email=' + userObj.email + '&password=' + userObj.password + '&password_confirmation=' + userObj.password,
+        url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
         dataType: 'json',
         crossDomain: 'true',
         data: {
@@ -77,10 +78,10 @@
           password: userObj.password,
           image: userObj.image
         }
-      }).then(function (response) {
+      }).then((response) => {
         console.log('sent!');
         //     getUserID();
-      }).catch(function (status) {
+      }).catch(function(status) {
         console.log(status);
       });
     } //end submitUser
@@ -88,14 +89,16 @@
     function addTweet(tweetObj) {
       $.ajax({
         type: 'POST',
-        url: 'http://chattertiy-api.herokuapp.com/messages?message[user_id]=1&message[text]=the ' + tweetObj.message,
+        url: `http://chattertiy-api.herokuapp.com/messages?message[user_id]=1&message[text]=the ${tweetObj.message}`,
         dataType: 'json',
         crossDomain: 'true',
-        data: {}
-      }).then(function (response) {
+        data: {
+
+        }
+      }).then((response) => {
         console.log('sent!', response);
         //     getUserID();
-      }).catch(function (status) {
+      }).catch(function(status) {
         console.log(status);
       });
     } //end submitUser
@@ -109,6 +112,6 @@
     };
   }; //end APP
 
-  var shitterApp = shitterModule();
+  const shitterApp = shitterModule();
   shitterApp.init();
 })(); //end iife
