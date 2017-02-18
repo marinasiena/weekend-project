@@ -1,142 +1,140 @@
-(function() {
-    "use strict";
+( function() {
+		"use strict";
 
-    const shitterModule = function() {
-      let form = document.querySelector('.user-input-form');
-      let nameInput = document.querySelector('.name-input');
-      let usernameInput = document.querySelector('.username-input');
-      let emailInput = document.querySelector('.email-input');
-      let passwordInput = document.querySelector('.password-input');
-      let imageInput = document.querySelector('.image-input');
-      let tweetForm = document.querySelector('.new-tweet-form');
-      let tweetText = document.querySelector('.tweet-text');
+		const shttr = function() {
+			let inputForm = document.querySelector( '.user-input-form' );
+			let nameInput = document.querySelector( '.name-input' );
+			let usernameInput = document.querySelector( '.username-input' );
+			let emailInput = document.querySelector( '.email-input' );
+			let passwordInput = document.querySelector( '.password-input' );
+			let imageInput = document.querySelector( '.image-input' );
+			let tweetForm = document.querySelector( '.new-tweet-form' );
+			let tweetText = document.querySelector( '.tweet-text' );
+			let newBtn = document.querySelector( '.new-btn' );
+			let authBtn = document.querySelector( '.auth-btn' );
 
 
-      let userObj = {};
 
+			let userObj = {};
+      let authObj = {};
+      let currUser = {};
+      let tweetObj = {};
 
-      // class User {
-      //   constructor(data) {
-      //     this.email = data.email;
-      //     this.userName = data.username;
-      //     this.name = data.name;
-      //     this.image = data.image;
-      //     this.build();
-      //   }
-      //   build() {
-      //     const source = $('').html();
-      //     const template = Handlebars.compile(source);
-      //     const context = {
-      //       email: this.email,
-      //       userName: this.userName,
-      //       name: this.name,
-      //       image: this.image
-      //     };
-      //     const html = template(context);
-      //     $('.grid').prepend(html);
-      //   }
-      // }
+			function bindEvents() {
 
-      function bindEvents() {
-        inputForm.addEventListener('submit', () => {
+				newBtn.addEventListener( 'click', () => {
+					event.preventDefault();
+					userObj = {
+						name: nameInput.value,
+						nickname: usernameInput.value,
+						email: emailInput.value,
+						password: passwordInput.value,
+						image: imageInput.value
+					};
+					console.log( 'newUser', userObj );
+					addUser( userObj );
+					inputForm.reset();
+				} );
+
+				authBtn.addEventListener( 'click', () => {
+					event.preventDefault();
+					authObj = {
+						email: emailInput.value,
+						password: passwordInput.value,
+					};
+					console.log( 'authUser', authObj );
+          authUser(authObj);
+					inputForm.reset();
+				} );
+
+        tweetForm.addEventListener('submit', () => {
           event.preventDefault();
-          userObj = {
-            name: nameInput.value,
-            username: usernameInput.value,
-            email: emailInput.value,
-            password: passwordInput.value,
-            image: imageInput.value
+          tweetObj = {
+            text: tweetText.value,
+            id: currUser.id
           };
-          console.log('newUser', userObj);
-          addUser(userObj);
+          addTweet(tweetObj);
           inputForm.reset();
         });
+			} //end bindEvents
 
-        // tweetForm.addEventListener('submit', () => {
-        // 	event.preventDefault();
-        // 	tweetObj = {
-        // 		message: tweetText.value,
-        // 	}
-        // 	form.reset();
-        // 	addTweet(tweetObj);
-        // });
+			function addUser( userObj ) {
 
-      } //end bindEvents
+				$.ajax( {
+					type: 'POST',
+					url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
+					dataType: 'json',
+					crossDomain: 'true',
+					data: {
+						name: userObj.name,
+						username: userObj.username,
+						email: userObj.email,
+						password: userObj.password,
+						image: userObj.image
+					}
+				} ).then( ( response ) => {
+          console.log( 'sent!', response );
+          currUser = response.data;
+          console.log( currUser );
 
-      function addUser(userObj) {
+					//     getUserID();
+				} ).catch( function( status ) {
+					console.log( status );
+				} );
+			} //end submitUser
 
-        $.ajax({
+
+      function authUser( authObj ) {
+
+        $.ajax( {
           type: 'POST',
-          url: `https://chattertiy-api.herokuapp.com/auth?email=${userObj.email}&password=${userObj.password}&password_confirmation=${userObj.password}`,
+          url: 'http://chattertiy-api.herokuapp.com/auth/sign_in',
           dataType: 'json',
           crossDomain: 'true',
           data: {
-            name: userObj.name,
-            username: userObj.username,
-            email: userObj.email,
-            password: userObj.password,
-            image: userObj.image
+            email: authObj.email,
+            password: authObj.password,
           }
-        }).then((response) => {
-          console.log('sent!', response);
-          //     getUserID();
-        }).catch(function(status) {
-          console.log(status);
-        });
+        } ).then( ( response ) => {
+          console.log( 'sent!', response );
+          currUser = response.data;
+        } ).catch( function( status ) {
+          console.log( status );
+        } );
       } //end submitUser
 
-      function addTweet(tweetObj) {
-        $.ajax({
-          type: 'POST',
-          url: `http://chattertiy-api.herokuapp.com/messages?message[user_id]=1&message[text]=the ${tweetObj.message}`,
-          dataType: 'json',
-          crossDomain: 'true',
-          data: {
+			function addTweet( tweetObj ) {
+				$.ajax( {
+					type: 'POST',
+					url: `http://chattertiy-api.herokuapp.com/messages`,
+					dataType: 'json',
+					crossDomain: 'true',
+					data: {
+            message: tweetObj.text,
+            id: tweetObj.id
+					}
+				} ).then( ( response ) => {
+					console.log( 'sent!', response );
+					//     getUserID();
+				} ).catch( function( status ) {
+					console.log( status );
+				} );
+			} //end addTweet
 
-          }
-        }).then((response) => {
-          console.log('sent!', response);
-          //     getUserID();
-        }).catch(function(status) {
-          console.log(status);
-        });
-      } //end submitUser
+			function init() {
+				bindEvents();
+			}
 
-      function init() {
-        bindEvents();
-      }
 
-      return {
-        init: init
-      };
+			return {
+				init: init
+			};
 
-    });
+		};//end shttr
 
-  const ourTwitter = shttr(); ourTwitter.init();
-}); //end docready
-})(); //end iife
+	const ourTwitter = shttr();
+  ourTwitter.init();
 
-// class User {
-//      constructor(data) {
-//        this.name = data.name;
-//        this.userName = data.username;
-//        this.email = data.email;
-//        this.password = data.password;
-//        this.image = data.image;
-//        this.build();
-//      }
-//      build() {
-//        const source = $('').html();
-//        const template = Handlebars.compile(source);
-//        const context = {
-//          name: this.name,
-//          userName: this.userName,
-//          email: this.email,
-//          password: this.password,
-//          image: this.image
-//        };
-//        const html = template(context);
-//        $('.grid').prepend(html);
-//      }
-//    }
-// }
+// } ); //end docready
+
+} )(); //end iife

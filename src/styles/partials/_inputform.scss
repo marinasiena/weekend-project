@@ -1,4 +1,11 @@
-.user-input {
+.auth-btn {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+  & button {
+    width: 150px;
+    margin-top: 20px;
+  }
 
 }
 

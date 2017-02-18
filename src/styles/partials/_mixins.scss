@@ -1,0 +1,33 @@
+// /mixins
+@mixin isRounded {
+  border-radius: 5px;
+}
+
+@mixin vcenter {
+  transform: translate(0, -50%);
+}
+
+//block-styling
+@mixin block-styling {
+  @include isRounded;
+  background-color: $darkwhite;
+  border: 1px solid $ltgray;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 250px;
+}
+
+//button styling
+.button {
+  background-color: $color;
+  border-radius: 5px;
+  border: none;
+  color: $darkwhite;
+  font-size: 1rem;
+  margin: 5px;
+  &:hover {
+      background-color: darken($color, 15% );
+      color: white;
+  }
+}

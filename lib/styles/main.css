@@ -55,45 +55,40 @@ img {
   max-width: 100%;
   width: 100%; }
 
+body {
+  font: 14px/1.4 "Arimo", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #E5F0F7; }
+
+a {
+  color: #1DA1F2; }
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1vh; }
+
 .button {
   background-color: #1DA1F2;
   border-radius: 5px;
   border: none;
   color: #f5f8fa;
   font-size: 1rem;
-  margin: 5px;
-  width: 80px; }
+  margin: 5px; }
   .button:hover {
     background-color: #0b76b8;
     color: white; }
-
-.float-left {
-  float: left; }
-
-.is-clear {
-  clear: both; }
-
-.icon-sm {
-  height: 40px;
-  width: 40px;
-  border-radius: 5px; }
-
-.icon-md {
-  height: 75px;
-  width: 75px;
-  border-radius: 10px; }
-
-.is-flex {
-  display: flex; }
-
-.is-hidden {
-  display: none; }
 
 .topbar {
   background-color: white;
   border-bottom: 1.5px solid #d0d3d5;
   justify-content: space-around;
-  height: 46px; }
+  height: 46px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
 
 .nav {
   justify-content: space-between;
@@ -195,15 +190,6 @@ img {
 
 .tweet-icon {
   width: 50%; }
-
-body {
-  font: 14px/1.4 "Arimo", sans-serif;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #E5F0F7; }
-
-a {
-  color: #1DA1F2; }
 
 .main-container {
   margin-left: 131px;
@@ -390,6 +376,14 @@ a {
   .tweets-right h4 span {
     font: 100 0.7rem/1 "Montserrat", sans-serif; }
 
+.auth-btn {
+  margin: 0 auto;
+  text-align: center;
+  width: 200px; }
+  .auth-btn button {
+    width: 150px;
+    margin-top: 20px; }
+
 .user-input-form {
   align-items: center;
   background-color: #f5f8fa;
@@ -414,7 +408,24 @@ a {
   .user-input-form button {
     margin-top: 20px; }
 
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 1vh; }
+.float-left {
+  float: left; }
+
+.is-clear {
+  clear: both; }
+
+.icon-sm {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px; }
+
+.icon-md {
+  height: 75px;
+  width: 75px;
+  border-radius: 10px; }
+
+.is-flex {
+  display: flex; }
+
+.is-hidden {
+  display: none; }

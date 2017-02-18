@@ -1,13 +1,8 @@
 @import 'partials/reset';
-@import 'partials/styling';
-@import 'partials/topbar';
 @import 'partials/globals';
+@import 'partials/mixins';
+@import 'partials/topbar';
 @import 'partials/maincontainer';
 @import 'partials/block';
 @import 'partials/inputform';
-
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 1vh;
-}
+@import 'partials/styling';
