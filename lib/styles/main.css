@@ -55,6 +55,22 @@ img {
   max-width: 100%;
   width: 100%; }
 
+.float-left {
+  float: left; }
+
+.is-clear {
+  clear: both; }
+
+.icon-sm {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px; }
+
+.icon-md {
+  height: 75px;
+  width: 75px;
+  border-radius: 10px; }
+
 .is-flex {
   display: flex; }
 
@@ -242,6 +258,51 @@ a {
   margin: 0 5px -20px;
   width: 75px; }
 
+.copyright-block {
+  border-radius: 5px;
+  background-color: #f5f8fa;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 250px; }
+  .copyright-block span {
+    font: 100 0.7rem/1 "Arimo", sans-serif;
+    color: #CBCBCB;
+    padding: 0 5px;
+    display: inline-block; }
+    .copyright-block span:hover {
+      color: #626262;
+      text-decoration: underline; }
+
+.follow-block {
+  border-radius: 5px;
+  background-color: #f5f8fa;
+  border: 1px solid #CBCBCB;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  width: 250px; }
+  .follow-block h3 {
+    font: 100 1rem/1 "Montserrat", sans-serif; }
+    .follow-block h3 span {
+      font: 400 0.7rem/1 "Arimo", sans-serif;
+      color: #1DA1F2;
+      padding-left: 5px; }
+
+.follow-tweet {
+  overflow: hidden; }
+  .follow-tweet img {
+    margin: 5px; }
+  .follow-tweet h4 {
+    color: #1DA1F2;
+    font: 700 0.8rem/1 "Arimo", sans-serif;
+    padding: 5px 5px 0; }
+  .follow-tweet p {
+    color: #626262;
+    font: 400 0.8rem/1 "Arimo", sans-serif;
+    padding-left: 5px; }
+
 .trends-block {
   border-radius: 5px;
   background-color: #f5f8fa;
@@ -267,46 +328,40 @@ a {
   font: 400 0.8rem/1 "Arimo", sans-serif;
   padding-left: 5px; }
 
-.follow-block {
+.new-tweet {
   border-radius: 5px;
   background-color: #f5f8fa;
   border: 1px solid #CBCBCB;
   margin: 5px;
   padding: 10px;
   position: relative;
-  width: 250px; }
-  .follow-block h3 {
-    font: 100 1rem/1 "Montserrat", sans-serif; }
-    .follow-block h3 span {
-      font: 400 0.7rem/1 "Arimo", sans-serif;
-      color: #1DA1F2;
-      padding-left: 5px; }
+  width: 250px;
+  width: 450px;
+  overflow: hidden; }
 
-.follow-tweet h4 {
-  color: #1DA1F2;
-  font: 700 0.8rem/1 "Arimo", sans-serif;
-  padding: 5px 5px 0; }
-
-.follow-tweet p {
-  color: #626262;
-  font: 400 0.8rem/1 "Arimo", sans-serif;
-  padding-left: 5px; }
-
-.copyright-block {
-  border-radius: 5px;
-  background-color: #f5f8fa;
-  border: 1px solid #CBCBCB;
-  margin: 5px;
-  padding: 10px;
-  position: relative;
-  width: 250px; }
-  .copyright-block span {
-    font: 100 0.7rem/1 "Arimo", sans-serif;
-    color: #CBCBCB;
-    padding: 5px; }
-    .copyright-block span:hover {
-      color: #626262;
-      text-decoration: underline; }
+.new-tweet-form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .new-tweet-form textarea {
+    border: 1px solid #CBCBCB;
+    border-radius: 5px;
+    color: #1DA1F2;
+    font: 700 0.9rem "Arimo", sans-serif;
+    padding-left: 5px;
+    resize: none;
+    width: 350px; }
+  .new-tweet-form button {
+    background-color: #1DA1F2;
+    border-radius: 5px;
+    border: none;
+    color: #f5f8fa;
+    font-size: 1rem;
+    margin: 5px;
+    width: 80px; }
+    .new-tweet-form button:hover {
+      background-color: #0b76b8;
+      color: white; }
 
 .tweets {
   border-radius: 5px;
@@ -337,4 +392,4 @@ a {
 .page-wrapper {
   display: flex;
   justify-content: center;
-  margin: 2vh; }
+  margin: 1vh; }

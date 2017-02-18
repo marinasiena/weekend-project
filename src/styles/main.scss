@@ -3,14 +3,10 @@
 @import 'partials/topbar';
 @import 'partials/globals';
 @import 'partials/maincontainer';
-@import 'partials/user-block';
-@import 'partials/trends-block';
-@import 'partials/follow-block';
-@import 'partials/copyright-block';
-@import 'partials/tweet-block';
+@import 'partials/block';
 
 .page-wrapper {
   display: flex;
   justify-content: center;
-  margin: 2vh;
+  margin: 1vh;
 }
