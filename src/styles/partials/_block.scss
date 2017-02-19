@@ -1,0 +1,193 @@
+// user-block
+
+.user-block {
+    @include isRounded;
+    @include block-styling;
+    background-color: $color;
+    padding: 0;
+    width: 250px;
+    height: 180px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+.user-block-heading {
+    color: $ltgray;
+    text-transform: uppercase;
+}
+
+.user-block-values {
+    color: $color;
+    font-weight: 700;
+}
+
+.lower-half {
+    background-color: white;
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+
+    & ul {
+        clear: both;
+        display: flex;
+        height: 0;
+        justify-content: center;
+
+        & li {
+            padding: 0 3px;
+        }
+    }
+}
+
+.username-block {
+    & img {
+        @include isRounded;
+        @include vcenter;
+        border: 3px solid white;
+        float: left;
+        margin: 0 5px -20px;
+        width: 75px;
+    }
+}
+// copyright
+
+.copyright-block {
+    @include block-styling;
+
+    & span {
+        font: 100 0.7rem/1 $Arimo;
+        color: $ltgray;
+        padding: 0 5px;
+        display: inline-block;
+
+        &:hover {
+            color: $dkgray;
+            text-decoration: underline;
+        }
+    }
+}
+// follow
+
+.follow-block {
+    @include block-styling;
+
+    & h3 {
+        font: 100 1rem/1 $Montserrat;
+
+        & span {
+            font: 400 0.7rem/1 $Arimo;
+            color: $color;
+            padding-left: 5px;
+        }
+    }
+}
+
+.follow-tweet {
+    overflow: hidden;
+
+    & img {
+        margin: 5px;
+    }
+
+    & h4 {
+        color: $color;
+        font: 700 0.8rem/1 $Arimo;
+        padding: 5px 5px 0;
+    }
+
+    & p {
+        color: $dkgray;
+        font: 400 0.8rem/1 $Arimo;
+        padding-left: 5px;
+    }
+}
+// trends
+
+.trends-block {
+    @include block-styling;
+
+    & h3 {
+        font: 100 1rem/1 $Montserrat;
+
+        & span {
+            font: 400 0.7rem/1 $Arimo;
+            color: $color;
+            padding-left: 5px;
+        }
+    }
+}
+
+.trends-tweet {
+    & h4 {
+        color: $color;
+        font: 700 0.8rem/1 $Arimo;
+        padding: 5px 5px 0;
+    }
+
+    & p {
+        color: $dkgray;
+        font: 400 0.8rem/1 $Arimo;
+        padding-left: 5px;
+    }
+}
+// new tweet
+
+.new-tweet {
+    @include block-styling;
+    width: 450px;
+    overflow: hidden;
+}
+
+.new-tweet-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    & textarea {
+        border: 1px solid $ltgray;
+        border-radius: 5px;
+        color: $color;
+        font: 700 0.9rem $Arimo;
+        padding-left: 5px;
+        resize: none;
+        width: 350px;
+    }
+}
+
+.tweets {
+    @include block-styling;
+    width: 450px;
+    display: flex;
+    align-items: top;
+    justify-content: flex;
+
+    & img {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+    }
+
+    & span img {
+        max-height: 30px;
+        width: auto;
+    }
+}
+
+.tweets-right {
+    & h4 {
+        font: 700 0.8rem/1 $Arimo;
+        padding-bottom: 5px;
+
+        & span {
+            font: 100 0.7rem/1 $Montserrat;
+        }
+    }
+}
