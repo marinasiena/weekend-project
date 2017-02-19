@@ -162,26 +162,23 @@
     }
 }
 
-.tweets {
+.tweets-right {
     @include block-styling;
     width: 450px;
-    display: flex;
-    align-items: top;
-    justify-content: flex;
+    overflow: hidden;
 
     & img {
         height: 50px;
         width: 50px;
         padding: 5px;
+        float: left;
     }
 
     & span img {
         max-height: 30px;
         width: auto;
     }
-}
 
-.tweets-right {
     & h4 {
         font: 700 0.8rem/1 $Arimo;
         padding-bottom: 5px;
@@ -189,5 +186,12 @@
         & span {
             font: 100 0.7rem/1 $Montserrat;
         }
+    }
+}
+
+.tweet-icons {
+    & img {
+        height: 20px;
+        width: inherit;
     }
 }
