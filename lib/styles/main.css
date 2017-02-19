@@ -67,7 +67,11 @@ a {
 .page-wrapper {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   margin-top: 2vh; }
+=======
+  margin-top: 3rem; }
+>>>>>>> Carter
 
 .button {
   background-color: #1DA1F2;
@@ -99,7 +103,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 41px;
+  height: 45px;
   font-size: 13px;
   font-weight: 900; }
   .nav-item:hover {
@@ -164,11 +168,12 @@ a {
   padding: 0; }
 
 .profile-icon {
-  border-radius: 5px;
   height: 32px;
   width: 32px; }
 
 .pic-icon {
+  border-radius: 5px;
+  height: 100%;
   width: 100%; }
 
 .tweet-btn {
@@ -396,6 +401,9 @@ a {
   padding: 60px 0;
   width: 300px; }
   .user-input-form h1 {
+    font: 700 1.5rem "Arimo", sans-serif;
+    color: #1DA1F2; }
+  .user-input-form h2 {
     font: 700 1rem "Arimo", sans-serif;
     color: #1DA1F2; }
   .user-input-form img {

@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 41px;
+  height: 45px;
   font-size: 13px;
   font-weight: 900;
   &:hover {
@@ -92,13 +92,13 @@ position: relative;
   padding: 0;
 }
 .profile-icon {
-  border-radius: 5px;
   height: 32px;
   width: 32px;
 }
 .pic-icon {
+  border-radius: 5px;
+  height: 100%;
   width: 100%;
-
 }
 .tweet-btn {
   align-items: center;
