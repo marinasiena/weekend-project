@@ -102,7 +102,7 @@
       // console.log('authObj', authObj);
       const settings = {
         method: 'POST',
-        url: 'http://chattertiy-api.herokuapp.com/auth/sign_in',
+        url: 'https://chattertiy-api.herokuapp.com/auth/sign_in',
         dataType: 'json',
         crossDomain: 'true',
         data: {
@@ -193,7 +193,7 @@
     function addTweet(newTweet) {
       $.ajax({
         type: 'POST',
-        url: 'http://chattertiy-api.herokuapp.com/messages',
+        url: 'https://chattertiy-api.herokuapp.com/messages',
         dataType: 'json',
         crossDomain: 'true',
         data: {
